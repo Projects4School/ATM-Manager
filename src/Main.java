@@ -1,13 +1,16 @@
 import Services.Database;
 import UI.Window;
 
+import javax.sound.sampled.AudioSystem;
 import javax.swing.*;
+import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-        new Window();
         Database connexion = new Database("ATM-Database.db");
         connexion.connect();
+
+        new Window();
 
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             public void run() {

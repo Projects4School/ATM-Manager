@@ -75,4 +75,8 @@ public class Client {
     public void setBalance(Float balance) {
         Balance = balance;
     }
+
+    public Object[] toObject() {
+        return new Object[] {getClientId(), getName(), getSurname(), getAddress(), getPostalCode(), getCity(), getBalance()};
+    }
 }

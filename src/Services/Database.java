@@ -3,6 +3,7 @@ package Services;
 import Models.Client;
 
 import java.sql.*;
+import java.util.Map;
 
 public class Database {
     private String DBPath = "database.db";
@@ -39,18 +40,42 @@ public class Database {
 
     public void addClient(Client client) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO clients VALUES(?,?,?,?,?,?)");
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO clients VALUES(?,?,?,?,?,?,?)");
             preparedStatement.setString(1, client.getClientId());
             preparedStatement.setString(2, client.getSurname());
             preparedStatement.setString(3, client.getName());
             preparedStatement.setString(4, client.getAddress());
-            preparedStatement.setInt(4, client.getPostalCode());
-            preparedStatement.setString(4, client.getCity());
-            preparedStatement.setFloat(4, client.getBalance());
+            preparedStatement.setInt(5, client.getPostalCode());
+            preparedStatement.setString(6, client.getCity());
+            preparedStatement.setFloat(7, client.getBalance());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
+        }
+    }
+
+    public Client[] getAllClients() {
+        int size = getColCount("clients");
+        Client[] clients = new Client[size];
+        try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery("SELECT * FROM clients")) {
+            int i = 0;
+            while (rs.next()) {
+                clients[i] = new Client(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5), rs.getString(6), rs.getFloat(7));
+                i++;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return clients;
+    }
+
+    public int getColCount(String table) {
+        try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM " + table)) {
+            return rs.getInt(1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return 0;
         }
     }
 
