@@ -3,6 +3,7 @@ package UI;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
 public class Window extends JFrame {
     public Window() {
@@ -15,14 +16,22 @@ public class Window extends JFrame {
         JTabbedPane tab = new JTabbedPane(SwingConstants.TOP);
 
         JPanel tab1 = new JPanel();
-        JLabel titreOnglet1 = new JLabel("Onglet 1");
-        tab1.add(titreOnglet1);
-        tab.addTab("onglet1", tab1);
+        JButton newClientBtn = new JButton("New User");
+        newClientBtn.setBackground(Color.BLACK);
+        newClientBtn.setAction(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Modal modal = new Modal();
+                modal.NewClientModal();
+                modal.setVisible(true);
+            }
+        });
+        tab1.add(newClientBtn);
+        tab.addTab("Clients", tab1);
 
         JPanel tab2 = new JPanel();
-        JLabel titreOnglet2 = new JLabel("Onglet 2");
-        tab2.add(titreOnglet2);
-        tab.addTab("onglet2", tab2);
+
+        tab.addTab("Operations", tab2);
 
         tab.setOpaque(true);
         panel.add(tab);
