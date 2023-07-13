@@ -5,7 +5,7 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        final Window win = new Window();
+        new Window();
         Database connexion = new Database("ATM-Database.db");
         connexion.connect();
 
