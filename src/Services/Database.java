@@ -1,6 +1,7 @@
 package Services;
 
 import Models.Client;
+import Models.Operation;
 
 import java.sql.*;
 import java.util.Map;
@@ -68,6 +69,42 @@ public class Database {
         }
 
         return clients;
+    }
+
+    public void newOperation(Operation operation) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO operations VALUES(?,?,?,?,?)");
+            preparedStatement.setString(1, operation.getOperationID());
+            preparedStatement.setInt(2, operation.getType());
+            preparedStatement.setFloat(3, operation.getMount());
+            preparedStatement.setInt(4, operation.getDate());
+            preparedStatement.setString(5, operation.getClientID());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Float getClientBalance(String clientId) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT balance FROM clients WHERE client_id = ?");
+            preparedStatement.setString(1, clientId);
+            ResultSet rs = preparedStatement.executeQuery();
+            return rs.getFloat(1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return 0.f;
+        }
+    }
+    public void updateBalance(String clientId, Float newBalance) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("UPDATE clients SET balance = ? WHERE client_id = ?");
+            preparedStatement.setFloat(1, newBalance);
+            preparedStatement.setString(2, clientId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public int getColCount(String table) {

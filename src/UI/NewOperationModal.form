@@ -76,7 +76,7 @@
               <component id="7a0d7" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
+                    <preferred-size width="500" height="-1"/>
                   </grid>
                 </constraints>
                 <properties>
@@ -91,7 +91,7 @@
               <component id="21be0" class="javax.swing.JComboBox" binding="comboBox2" default-binding="true">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
+                    <preferred-size width="500" height="-1"/>
                   </grid>
                 </constraints>
                 <properties>
@@ -101,7 +101,7 @@
               <component id="15213" class="javax.swing.JSpinner" binding="spinner1" default-binding="true">
                 <constraints>
                   <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
+                    <preferred-size width="500" height="-1"/>
                   </grid>
                 </constraints>
                 <properties>

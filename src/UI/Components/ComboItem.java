@@ -1,8 +1,8 @@
 package UI.Components;
 
 public final class ComboItem {
-    private String Key;
-    private String Value;
+    private final String Key;
+    private final String Value;
 
     public ComboItem(String key, String value)
     {
