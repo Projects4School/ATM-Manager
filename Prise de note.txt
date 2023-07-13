@@ -1,0 +1,91 @@
+Java
+
+langage système simple, orienté objet et interprété
+Optimisation du temps des cycles de dev
+Les applications produites sont portable : cross platform
+Par rapport au C++, gestion de la mémoire et des erreurs sont simplifiées
+Il est possible de créer des applications multi threads
+Les applications sont très robustes et sécurisées grâce à de vérifications du bytecode avec exécution
+
+La plateforme JAVA
+JDK : Java Dev Kit
+API
+Javac : le compilateur java
+JRE : l’environnement d’exécution installe sur la machine cliente. Il propose notamment l’outil Java qui permet d’exécuter les programmes java
+JVM : permet l’exécution du programme passé en paramètre, de la commande java
+
+La machine virtuelle JAVA
+Elle est mise à disposition pour de multiple OS.
+Ses rôles sont multiples :
+elle charge des classes. A l’instanciation d’une classe, celle est qui charge le bytecode à interpréter
+Elle gère la mémoire, les pointeurs et les références. Elle gère aussi la libération de la mémoire : garbage collector
+Elle gère aussi la sécurité
+Interfacage avec du code natif
+
+L’API JAVA
+ensemble wesh logiciel pré conçu pour fournir un grand nombre de fonctionnalités
+L’API java 17 :
+21 modules
+220 packages
+Plus de 4000 classes et interfaces mises à disposition
+
+Deux implémentations pour une plateforme
+oracle JDK
+OpenJDK
+Il est recommandé d’ajouter JAVA-HOME en tant que variable d’environnement :
+C/Users/Dev/Desktop/Java/JDK-17.0.2
+
+Ensuite, vous modifiez la variable d’environnement PATH avec l’entrée : …;%JAVA_HOME%\bin
+
+Les variables en JAVA
+- les variables d'instance: n'existe que si une instance de classe est disponible.
+-Les variables de classe: elles sont aussi declarees a l'interieur d'une classe mais avec le mot clé static. La variable de classe est disponible directement depuis la classe et existe en un exemplaire unique.
+On peut avoir 50 instances d'une meme classe, mais la valeur d'une variable de classe est unique.
+- Les variables locales sont déclarées a l'interieur d'une methode
+
+Les types de variables : 
+- Les types valeurs
+- Les types références
+
+Les conversions
+
+En java il existe deux types de conversions :
+
+- les conversions implicites
+- Les conversions implicites sont des conversions qui sont faites automatiquement par le compilateur.
+
+- les conversions explicites
+- Les conversions explicites sont des conversions qui sont faites par le programmeur.
+
+La programmation orientee objet
+Les classes sont constituees de champs, de constructeurs et de methodes. Les champs representent les donnees de la classe, les constructeurs permettent de creer des objets et les methodes permettent de manipuler les objets.
+
+A ces notions fondamentales vont s'ajouter trois concepts importants :
+- l'encapsulation
+- l'heritage
+- le polymorphisme
+
+Les modificateurs de classes :
+- public : la classe est visible depuis n'importe quel autre classe. Sans ce modificateur, la classe est visible uniquement depuis le package dans lequel elle est declaree.
+- abstract: la classe est abstraite. Une classe abstraite ne peut pas etre instanciee.
+- final: la classe ne peut pas etre heritee.
+
+Les modificateurs de methodes :
+- public : la methode est visible depuis n'importe quel autre classe. Sans ce modificateur, la methode est visible uniquement depuis le package dans lequel elle est declaree.
+- protected : la methode est visible depuis la classe, le package et les classes filles.
+- private : la methode est visible uniquement depuis la classe.
+- static : la methode est une methode de classe. Elle peut etre utilisee sans instancier la classe.
+- abstract : la methode est abstraite. Elle doit etre redefinie dans les classes filles.
+- final : la methode ne peut pas etre redefinie dans les classes filles.
+- native : la methode est implementee dans un langage autre que Java.
+- synchronized : la methode ne peut etre utilisee que par un seul thread a la fois.
+
+Les packages: 
+Un package est un ensemble de classes regroupees dans un meme repertoire.
+- Les packages permettent d'organiser les classes en categories.
+- Les packages permettent de proteger les classes en les rendant privees.
+- Les packages permettent de gerer les conflits de noms de classes.
+- Les packages permettent de controler l'acces aux classes.
+- Les packages permettent de creer des bibliotheques de classes.
+- Les packages permettent de creer des classes qui ne sont pas visibles depuis l'exterieur.
+- Les packages permettent de creer des classes qui ne sont visibles que depuis le package.

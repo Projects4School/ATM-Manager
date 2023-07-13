@@ -1,0 +1,34 @@
+<mxfile host="app.diagrams.net" modified="2023-07-13T15:29:28.501Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="DTS0L2KG-2AwYpXe2iIR" version="21.6.2" type="device">
+  <diagram name="Page-1" id="mRsuX9IZsGFIcO8EHhSa">
+    <mxGraphModel dx="1434" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t2ZvuOyZcZk1DrQGyEVY-1" value="Operation" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="180" width="160" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="t2ZvuOyZcZk1DrQGyEVY-2" value="- OperationId : String&lt;br&gt;- ClientId : String&lt;br&gt;- Type : Int&lt;br&gt;- Mount : Float&lt;br&gt;- Date : Int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="t2ZvuOyZcZk1DrQGyEVY-1">
+          <mxGeometry y="26" width="160" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="t2ZvuOyZcZk1DrQGyEVY-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="t2ZvuOyZcZk1DrQGyEVY-1">
+          <mxGeometry y="110" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="t2ZvuOyZcZk1DrQGyEVY-4" value="+ getOperationId&lt;br&gt;+ setOpeartionId&lt;br&gt;+ getClientId&lt;br&gt;+ setClientId&lt;br&gt;+ getType&lt;br&gt;+ setType&lt;br&gt;+ getMount&lt;br&gt;+ setMount&lt;br&gt;+ getDate&lt;br&gt;+ setDate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="t2ZvuOyZcZk1DrQGyEVY-1">
+          <mxGeometry y="118" width="160" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="t2ZvuOyZcZk1DrQGyEVY-5" value="CLIENT" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="180" width="160" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="t2ZvuOyZcZk1DrQGyEVY-6" value="- ClientId : String&lt;br&gt;- Surname : String&lt;br&gt;- Name : String&lt;br&gt;- Address : String&lt;br&gt;- PostalCode : Int&lt;br&gt;- City : String&lt;br&gt;- Balance : Float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="t2ZvuOyZcZk1DrQGyEVY-5">
+          <mxGeometry y="26" width="160" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="t2ZvuOyZcZk1DrQGyEVY-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="t2ZvuOyZcZk1DrQGyEVY-5">
+          <mxGeometry y="140" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="t2ZvuOyZcZk1DrQGyEVY-8" value="+ getClientId&lt;br&gt;+ setClientId&lt;br&gt;+ getSurname&lt;br&gt;+ setSurname&lt;br&gt;+ getName&lt;br&gt;+ setName&lt;br&gt;+ getAddress&lt;br&gt;+ setAddress&lt;br&gt;+ getPostalCode&lt;br&gt;+ setPostalCode&lt;br&gt;+ getCity&lt;br&gt;+ setCity&lt;br&gt;+ getBalance&lt;br&gt;+ setBalance" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="t2ZvuOyZcZk1DrQGyEVY-5">
+          <mxGeometry y="148" width="160" height="212" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
