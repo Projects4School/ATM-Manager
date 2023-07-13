@@ -85,6 +85,23 @@ public class Database {
         }
     }
 
+
+    public Operation[] getAllOperations() {
+        int size = getColCount("operations");
+        Operation[] operations = new Operation[size];
+        try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery("SELECT * FROM operations")) {
+            int i = 0;
+            while (rs.next()) {
+                operations[i] = new Operation(rs.getString(1), rs.getString(5), rs.getInt(2), rs.getFloat(3), rs.getInt(4));
+                i++;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return operations;
+    }
+
     public Float getClientBalance(String clientId) {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT balance FROM clients WHERE client_id = ?");

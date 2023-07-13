@@ -64,7 +64,7 @@ public class NewOperationModal extends JDialog {
     }
 
     private void onOK() {
-        String clientId = ((ComboItem) Objects.requireNonNull(comboBox1.getSelectedItem())).getKey();
+        String clientId = ((ComboItem) Objects.requireNonNull(comboBox1.getSelectedItem())).getValue();
         Integer type = Integer.parseInt(((ComboItem) Objects.requireNonNull(comboBox2.getSelectedItem())).getValue());
         Float mount = Float.parseFloat(spinner1.getModel().getValue().toString());
         Date now = new Date();

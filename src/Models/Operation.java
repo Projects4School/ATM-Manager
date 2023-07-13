@@ -54,4 +54,8 @@ public class Operation {
     public void setDate(Integer date) {
         Date = date;
     }
+
+    public Object[] toObject() {
+        return new Object[] {getOperationID(), getClientID(), getType(), getMount(), getDate()};
+    }
 }

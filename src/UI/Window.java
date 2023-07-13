@@ -1,6 +1,7 @@
 package UI;
 
 import Models.Client;
+import Models.Operation;
 import Services.Database;
 
 import javax.swing.*;
@@ -15,6 +16,8 @@ public class Window {
     private JTable table1;
     private JButton newOperationButton;
     private JTable table2;
+    private JButton updateButton;
+    private JButton updateButton1;
 
     public Window() {
         JFrame frame = new JFrame("ATM Manager");
@@ -24,6 +27,7 @@ public class Window {
         frame.setVisible(true);
 
         updateClientTable();
+        updateOperationTable();
         newClientButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -32,11 +36,25 @@ public class Window {
             }
         });
 
+        updateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                updateClientTable();
+            }
+        });
+
         newOperationButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 NewOperationModal modal = new NewOperationModal();
                 modal.setVisible(true);
+            }
+        });
+
+        updateButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                updateOperationTable();
             }
         });
     }
@@ -54,5 +72,20 @@ public class Window {
         }
         table1.setModel(model);
         table1.updateUI();
+    }
+
+    public void updateOperationTable() {
+        Operation[] operations = Database.getInstance().getAllOperations();
+        String[] head = {"ID", "Client ID", "Type", "Mount", "Date"};
+        DefaultTableModel model = new DefaultTableModel();
+        for (String col : head) {
+            model.addColumn(col);
+        }
+
+        for (Operation operation : operations) {
+            model.addRow(operation.toObject());
+        }
+        table2.setModel(model);
+        table2.updateUI();
     }
 }
